@@ -1,0 +1,18 @@
+button {
+    cursor: pointer;
+    font-family: inherit;
+    display: block;
+    border-style: none;
+}
+
+body {
+    font-family:'DM Sans', Arial;
+    background-color:var(--main-background);
+    color: var(--second-text-color);
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

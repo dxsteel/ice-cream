@@ -1,0 +1,445 @@
+.advantages-section {
+  background: var(--second-background);
+  padding-bottom: 97px;
+}
+
+.advantages {
+  @media screen and (min-width: 768px) {
+    padding-right: 36px;
+    padding-left: 36px;
+    padding-bottom: 139px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-right: 115px;
+    padding-left: 115px;
+    padding-bottom: 140px;
+  }
+}
+
+.advantages__subtitle {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1.13;
+  text-transform: uppercase;
+
+  color: var(--main-title-color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: 1.14;
+    margin-bottom: 13px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    line-height: 1.13;
+    margin-bottom: 15px;
+  }
+}
+
+.advantages__icon-first::before {
+  content: '';
+  width: 33px;
+  height: 50px;
+  margin-bottom: 16px;
+  margin-top: 39px;
+
+  display: inline-block;
+
+  background-image: url('../images/icon-first.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.advantages__icon-second::before {
+  content: '';
+
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+
+  display: inline-block;
+
+  background-image: url('../images/icon-second.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantages__icon-third::before {
+  content: '';
+
+  width: 44px;
+  height: 50px;
+  margin-bottom: 16px;
+
+  display: inline-block;
+
+  background-image: url('../images/icon-third.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.advantages__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    // margin-right: -60px;
+    // margin-top: -60px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-right: -30px;
+    margin-top: -30px;
+  }
+}
+
+.advantages__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.66;
+
+  color: var(--second-text-color);
+
+  max-width: 230px;
+  height: 36px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.71;
+    max-width: 180px;
+    height: 67px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+    max-width: 330px;
+    height: 52px;
+    margin-bottom: 0;
+  }
+}
+
+.advantages__item {
+  &:not(:last-child) {
+    margin-bottom: 38px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 60px);
+    margin-right: 60px;
+    // margin-top: 60px;
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+}
+
+.subtitle-first {
+  width: 98px;
+  height: 56px;
+
+  @media screen and (min-width: 1280px) {
+    height: 65px;
+  }
+}
+
+.subtitle-second {
+  width: 98px;
+  height: 56px;
+
+  @media screen and (min-width: 768px) {
+    width: 147px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 65px;
+  }
+}
+
+.subtitle-third {
+  width: 98px;
+  height: 56px;
+
+  @media screen and (min-width: 768px) {
+    width: 77px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 65px;
+  }
+}
+
+// МОДАЛКA BUY NOW//
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 186, 0.5);
+
+  opacity: 1;
+  transition: opacity 500ms linear;
+  z-index: 10000000;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px 10px 20px 10px;
+  transform: translate(-50%, -50%) scale(1);
+
+  min-width: 250px;
+  height: 450px;
+
+  background-color: var(--second-background);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 5%;
+
+  transition: transform 500ms linear;
+
+  overflow: auto;
+
+  @media screen and (min-width: 321px) and (max-width: 480px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 480px) {
+    width: 300px;
+    height: 400px;
+    padding: 35px 10px 10px 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 400px;
+    height: 450px;
+    padding: 40px 20px 10px 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 400px;
+    height: 500px;
+    padding: 40px 20px 10px 20px;
+  }
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.3);
+}
+
+.vector {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--second-title-color);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: var(--third-text-color);
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @media screen and (min-width: 480px) {
+    width: 25px;
+    height: 25px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* ФОРМА МОДАЛЬНОГО ОКНА */
+
+.title-modal {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  color: var(--main-title-color);
+  text-align: center;
+
+  margin-bottom: 12px;
+  @media screen and (min-width: 480px) {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.03em;
+  }
+  @media screen and (min-width: 1280px) {
+    line-height: 30px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.modal-input {
+  display: block;
+  width: 100%;
+  height: 25px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  padding-right: 10px;
+
+  border: 2px solid var(--second-title-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color 500ms linear;
+
+  @media screen and (min-width: 480px) {
+    height: 25px;
+    margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+.modal-label {
+  font-size: 10px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--main-title-color);
+  @media screen and (min-width: 480px) {
+    font-size: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  border: 2px solid var(--second-title-color);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+  outline: none;
+
+  transition: border-color 500ms linear;
+  @media screen and (min-width: 480px) {
+    height: 90px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 120px;
+  }
+}
+
+.modal-comment::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-btn {
+  display: block;
+
+  background: var(--second-title-color);
+  border-radius: 22px;
+  color: var(--main-text-color);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  &:hover,
+  &:focus {
+    background: var(--main-title-color);
+    color: var(--second-title-color);
+  }
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  width: 150px;
+  height: 40px;
+  margin: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 150px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+    height: 40px;
+  }
+}
+
+.modal-form-wrapper {
+  position: relative;
+  display: block;
+}
+
+.modal-input:focus,
+.modal-comment:focus {
+  border: 1px solid var(--main-title-color);
+}
+
+.icon-vector {
+  width: 10px;
+  height: 10px;
+  fill: var(--third-title-color);
+  transition: fill 500ms linear;
+
+  @media screen and (min-width: 768px) {
+    width: 13px;
+    height: 13px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 15px;
+    height: 15px;
+  }
+}
